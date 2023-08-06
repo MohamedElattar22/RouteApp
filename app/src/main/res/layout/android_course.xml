@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:backgroundTint="#f9f6ff"
+    android:layout_height="match_parent">
+
+
+
+
+    <ImageView
+        android:id="@+id/backToHomeBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/arrow_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/share"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:layout_margin="20dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backToHomeBtn">
+
+        <ImageView
+            android:foreground="@drawable/gradient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/android">
+
+        </ImageView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:text="برمجة تطبيقات الاندرويد"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            </TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView6"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/L.blue"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/bold"
+            android:text="اندرويــد"
+            android:textAlignment="center"
+            android:textColor="@color/white">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_margin="20dp"
+        android:text="جميع المستويات"
+        android:fontFamily="@font/bold"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="5dp"
+        android:fontFamily="@font/bold"
+        android:text="Description"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView6">
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:fontFamily="@font/bold"
+        android:text="@string/part_1_java_se_n_1_introduction_to_java_programming_n_overview_n_compiler_and_jvm_n_project_structure_n_hello_world_application_n_variables_and_data_types_n_operators_n_conditional_statements_if_switch_n_loops_for_while_do_while_n_2_basics_n_nested_loops_n_strings_n_arrays_n_functions_n_3_object_oriented_programming_n_classes_and_objects_n_encapsulation_and_data_hiding_n_inheritance_n_polymorphism_n_abstraction_abstract_classes_interfaces_n_4_collections_and_generics_n_sets_lists_n_threading_n_generics_class_and_methodpart_2_android_development_n_1_introduction_to_android_n_android_os_n_android_versions_n_os_architecture_n_application_component_n_android_studio_and_gradle_n_creating_hello_world_n_2_ui_components_n_layouts_constraints_layout_linear_layout_n_using_resources_drawables_strings_colors_and_styles_n_3_ui_components_ii_n_menu_n_support_localization_n_support_orientation_n_4_intents_and_activities_n_intents_n_intent_filters_n_5_fragments_n_what_is_fragments_n_fragment_manager_and_transaction_n_tablayout_navigationdrawer_bottomnavigation_n_6_dialogs_alert_dialog_n_display_dialog_with_items_n_custom_dialogs_dialog_fragment_n_7_data_storage_n_shared_preference_n_room_database_library_from_google_arch_components_n_8_threading_and_services_n_threading_n_service_and_intent_service_n_9_web_services_and_apis_n_what_is_json_n_how_to_make_network_calls_and_apis_n_consuming_web_apis_n_using_retrofit_and_gson_libraries_n_how_to_cache_apis_n_using_room_and_retrofit_together_n_what_is_repository_pattern_n_10_firebase_realtime_database_n_how_to_deal_with_realtime_database_n_11_notifications_n_simple_notification_n_firebase_to_push_notifications_n_one_signal_push_notifications_sdk"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+    </TextView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
