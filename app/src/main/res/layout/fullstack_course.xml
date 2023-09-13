@@ -12,9 +12,6 @@
     android:backgroundTint="#f9f6ff"
     android:layout_height="match_parent">
 
-
-
-
     <ImageView
         android:id="@+id/backToHomeBtn"
         android:layout_width="40dp"
@@ -53,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/android">
+            android:src="@drawable/full">
 
         </ImageView>
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -64,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bold"
-                android:text="برمجة تطبيقات الاندرويد"
+                android:text="Full Stack Web Development"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:layout_margin="20dp"
@@ -91,7 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/bold"
-            android:text="اندرويــد"
+            android:text="FullStack"
             android:textAlignment="center"
             android:textColor="@color/white">
         </TextView>
