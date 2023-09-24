@@ -1,3 +1,4 @@
+import android.content.DialogInterface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,7 +8,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.routeapp.R
 import com.example.routeapp.itemViewModel
 
-class CustomAdapter(private val mList: List<itemViewModel>) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+class CustomAdapter(private val mList: List<itemViewModel>) :
+    RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+    private lateinit var mListener : OnItemClickListener
+    interface OnItemClickListener{
+        fun onClick(position: Int)
+    }
+    fun setOnItemClickListener(listener: OnItemClickListener){
+        mListener = listener
+    }
+
+
+
 
     // create new views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -16,8 +28,10 @@ class CustomAdapter(private val mList: List<itemViewModel>) : RecyclerView.Adapt
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.courses_layout, parent, false)
 
-        return ViewHolder(view)
+        return ViewHolder(view , mListener)
     }
+
+
 
     // binds the list items to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -31,7 +45,11 @@ class CustomAdapter(private val mList: List<itemViewModel>) : RecyclerView.Adapt
         holder.coursetitle.text = ItemsViewModel.title
         holder.coursehrs.text = ItemsViewModel.hours
 
+
+
+
     }
+
 
     // return the number of the items in the list
     override fun getItemCount(): Int {
@@ -39,9 +57,16 @@ class CustomAdapter(private val mList: List<itemViewModel>) : RecyclerView.Adapt
     }
 
     // Holds the views for adding it to image and text
-    class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
+    class ViewHolder(ItemView: View , listener : OnItemClickListener) : RecyclerView.ViewHolder(ItemView) {
         val courseImg: ImageView = itemView.findViewById(R.id.courseImage)
         val coursetitle: TextView = itemView.findViewById(R.id.courseTitle)
         val coursehrs: TextView = itemView.findViewById(R.id.courseHours)
+
+        init {
+           itemView.setOnClickListener {
+               listener.onClick(adapterPosition)
+           }
+
+        }
     }
 }

@@ -9,7 +9,7 @@
         android:title="Search">
     </item>
     <item android:id="@+id/myclass"
-        android:icon="@drawable/mycourses"
+        android:icon="@drawable/book"
         android:title="My Corses">
     </item>
     <item android:id="@+id/fav"

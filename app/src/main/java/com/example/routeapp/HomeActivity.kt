@@ -4,6 +4,7 @@ import CustomAdapter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -20,6 +21,27 @@ class HomeActivity : AppCompatActivity() {
 
         val recyclerview = findViewById<RecyclerView>(R.id.coursesRv1)
         val adapter = CustomAdapter(data)
+        adapter.setOnItemClickListener(object : CustomAdapter.OnItemClickListener{
+            override fun onClick(position: Int) {
+                when(position){
+                    0 ->   Intent(this@HomeActivity ,IOSCourse::class.java).also {
+                        startActivity(it)
+                    }
+                    1 ->   Intent(this@HomeActivity , AndroidCourse::class.java).also {
+                        startActivity(it)
+                    }
+                    2 ->   Intent(this@HomeActivity , FullStackCourse::class.java).also {
+                        startActivity(it)
+                    }
+                }
+
+            }
+
+
+
+
+            }
+        )
         recyclerview.adapter = adapter
         val currentbtn = findViewById<CardView>(R.id.currentCourse)
         currentbtn.setOnClickListener {
